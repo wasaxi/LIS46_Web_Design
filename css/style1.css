@@ -1,0 +1,160 @@
+/* Global properties ======================================================== */
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:100%;
+    line-height:1em;
+    color:#454545;
+    margin:0;
+    padding:0;
+    /*background:url(../images/tail-middle.jpg) repeat-y center 194px;*/
+}
+html {
+    min-width:940px;
+}
+html,
+body {
+    height:100%;
+}
+
+
+
+/*----- txt, links, lines, titles -----*/
+
+h1{
+    position:absolute;
+    top:100px;
+    left:80px;
+    font-size:60px;
+    color:black;
+}
+
+
+button {
+    background:#ffffff;
+    color:#008cc4;
+    border-radius: 25px;
+}
+button:hover {
+    color:#ff7b01;
+}
+.home_login{
+    height:55px;
+    width:170px;
+    position:absolute;
+    top:320px;
+    left:160px;
+    margin:0;
+    padding: 0;
+    font-size:25px;
+}
+.home_register{
+    height:55px;
+    width:170px;
+    position:absolute;
+    top:320px;
+    left:480px;
+    font-size:25px;
+}
+.register_button{
+    font-size:15px;
+    height:30px;
+    width:100px;
+}
+.register_buttons1{
+    text-align: center;
+    padding:30px;
+    display: block;
+}
+.register_buttons2{
+    text-align: center;
+    padding:30px;
+    display: none;
+}
+.register_tab {
+    text-align: center;
+    padding:20px;
+}
+.login{
+    text-align: center;
+    padding:20px;
+}
+/*----- images -----*/
+.landing{
+    background: url(../images/home_background.jpg);
+    width:100%;
+    height:100%;
+    background-size: 100%,100%;
+}
+.logo_div {
+    width:200px;
+    height:100px;
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.logo{
+    width:300px;
+    height:auto;
+}
+.logo_login{
+    width:100%;
+    height:100px;
+    position:absolute;
+    top:100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.register1 {
+    display:block;
+    text-align: right;
+    padding:20px;
+    width:800px;
+}
+.register2 {
+    display:none;
+    text-align:left;
+    padding-left:450px;
+    padding-bottom: 20px;
+}
+.alreadyHave{
+    text-align: center;
+}
+.group{
+    padding:20px;
+
+}
+
+.label{
+    padding-right: 20px;
+}
+
+.buffer{
+    height:240px;
+}
+.label_user{
+    padding-right: 50px;
+    color :#008cc4;
+}
+.label_pass{
+    padding-right: 85px;
+    color :#008cc4;
+}
+.login_login {
+    margin-right: 40px;
+    margin-top: 40px;
+    height:30px;
+    width:200px;
+    font-size:17px;
+}
+.login_register{
+    margin-top:40px;
+    height:30px;
+    width:90px;
+    font-size:17px;
+}

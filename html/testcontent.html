@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Test | JAFFEE </title>
+	<link rel="stylesheet" href="../css/reset.css" type="text/css" media="all">
+	<link rel="stylesheet" href="../css/teststyle.css" type="text/css" media="all">
+	
+</head>
+	
+<header>
+      <div class="container">
+         <h1><a href="Home.html">JaffeeHomePage</a></h1>
+         <nav>
+            <ul>
+				<li><a href="Home.html" class="m1">Home Page</a></li>
+               <li><a href="course.html" class="m2">Course</a></li>
+               <li class="current"><a href="Test.html" class="m3">Test</a></li>
+               <li><a href="UserCentre.html" class="m4">User Centre</a></li>
+               <li class="last"><a href="Help.html" class="m5">Help</a></li>
+            </ul>
+         </nav>
+      </div>
+   </header>	
+	
+<body>	
+<div class="wrap">
+	<div class="container">
+	<a href="Test.html"> Back to the test page</a>
+	<div class="test2">
+		<h2>Test</h2>
+			<p>This is the test for Java.</p>
+			<h5>Multiple Choice Questions</h5>
+			<div class="ques">
+				1.Which of the following words is not a keyword of JAVA?<br>
+				<label><input type="radio" name="test1"/>A. static</label>
+				<label><input type="radio" name="test1"/>B. boolean</label>
+				<label><input type="radio" name="test1"/>C. void</label>
+				<label><input type="radio" name="test1"/>D. private</label>
+			</div>
+			<div class="ques">
+				2. K is an integer input by the keyboard, the type is int, and the calculation result of k% 17 is:<br>
+				<label><input type="radio" name="test2"/>A. Grammar mistake</label><br>
+				<label><input type="radio" name="test2"/>B. The final calculation result must be an integer between 0 and 16</label><br>
+				<label><input type="radio" name="test2"/>C. If the value of k is 34, the calculation result is 2</label><br>
+				<label><input type="radio" name="test2"/>D. The result may be greater than or equal to 17</label>
+			</div>
+			<div class="ques">
+				3. If you want your condition to depend on two conditions and both are true,
+				what symbol should be placed between the two Boolean statements?<br>
+				<label><input type="radio" name="test3"/>A. !</label>
+				<label><input type="radio" name="test3"/>B. ||</label>
+				<label><input type="radio" name="test3"/>C. &&</label>
+			</div>
+			<h5>Judgement Questions</h5>
+			<div class="ques">
+				1. Is there a syntax error in the following code?<br>
+				<pre>long te = 69L;</pre>
+				<label><input name="judgement1" type="radio" value="" />True</label>
+				<label><input name="judgement1" type="radio" value="" />False</label>
+			</div>
+			<div class="ques">
+				2. Only double can save a decimal<br>
+				<label><input name="judgement2" type="radio" value="" />True</label>
+				<label><input name="judgement2" type="radio" value="" />False</label>
+			</div>
+			<div class="ques">
+				3.Decimal saved with float variable must be saved in variable of double type<br>
+				<label><input name="judgement3" type="radio" value="" />True</label>
+				<label><input name="judgement3" type="radio" value="" />False</label>
+			</div>
+			<h5>Fill-in Questions</h5>
+			<div class="ques">
+				1. Run the following statement in the main function and write the result<br>
+				<pre>int i=8;<br>System.out.println(i);<br>System.out.println( "i="+i);</pre>
+				First Line:<input type="text" name="lname" /><br>
+				Second Line:<input type="text" name="lname" /><br>
+			</div>
+			<div class="ques">
+				2. Fill in the blank following this requirement : <br>
+				Use the keyboard to enter two integers, and then output the product of the two<br>
+				<pre>System.out.println(“Please enter two integers”);</pre>
+				<pre>Scanner scanner=new Scanner(System.in);</pre>
+				<pre>int a=scanner.nextInt();</pre>
+				<pre>int b=scanner.<input type="text" name="lname" />;</pre>
+				<pre>int sum=<input type="text" name="lname" />;</pre>
+			</div>
+			<div class="button-wrap"><button id="myBtn">Submit</button></div>
+			<p id="notice">Submit Your Test</p>
+			
+			<div id="myModal" class="modal">
+  			<div class="modal-content">
+    		<span class="close">&times;</span>
+    		<p>Submit Successfully!</p>
+  			</div>
+			
+			<script>
+			var modal = document.getElementById('myModal');
+			var btn = document.getElementById("myBtn");
+			// X element
+			var span = document.querySelector('.close');
+			var notice = document.getElementById('notice');
+			var quesArray = new Array();
+			var check = 0;
+			var text = document.getElementsByName('lname');
+			quesArray[0] = document.getElementsByName('test1');
+			quesArray[1] = document.getElementsByName('test2');
+			quesArray[2] = document.getElementsByName('test3');
+			quesArray[3] = document.getElementsByName('judgement1');
+			quesArray[4] = document.getElementsByName('judgement2');
+			quesArray[5] = document.getElementsByName('judgement3');
+
+			//Show the window
+			btn.onclick = function() {
+				check=0;
+				for(i=0;i<quesArray.length;i++){
+					for(j=0;j<quesArray[i].length;j++){
+						if(quesArray[i][j].checked)
+							check++;
+					}
+				}
+				for(i=0;i<text.length;i++){
+					if(text[i].value=='')
+						check++;
+				}
+				notice.innerHTML='You must finish all the questions!';
+				if(check==6){
+					modal.style.display = "block";
+					notice.innerHTML='You have submitted!';
+				}
+			}
+			//X to close
+			span.onclick = function() {
+				modal.style.display = "none";
+			}
+			// Other part to close
+			window.onclick = function(event) {
+				if ((event.target == modal)) {
+					modal.style.display = "none";
+				}
+			}
+			</script>
+ 
+</div>
+	</div>
+	</div>
+</div>
+<footer>
+	<div class="container">
+		<div class="inside">
+			<div class="wrapper">
+				<div class="fleft">24/7 Customer Service <span>+86 18810006666</span></div>
+				<div class="aligncenter"><a rel="nofollow" href="Home.html">Jaffee HomePage</a> Go back to the home page.<br>
+					<a href="course.html" class="new_window">Course</a> Start to Learn!</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+</body>
+
+</html>

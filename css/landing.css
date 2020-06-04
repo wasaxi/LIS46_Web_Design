@@ -1,0 +1,18 @@
+.landing{
+    background: url(../images/home_background.jpg);
+}
+.logo_div {
+    width:200px;
+    height:100px;
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.logo{
+    width:300px;
+    height:auto;
+}
